@@ -1,0 +1,14 @@
+{% extends 'quotes/base.html' %}
+{% block content %}
+<div class="quote-box">
+    {% if quote %}
+        <p class="quote-text">"{{ quote.text }}"</p>
+        <p class="quote-author">- {{ quote.author }}</p>
+    {% else %}
+        <p>No quotes available. Add some in admin!</p>
+    {% endif %}
+</div>
+<form method="get">
+    <button type="submit">Get Random Quote</button>
+</form>
+{% endblock %}
